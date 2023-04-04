@@ -55,7 +55,6 @@ class BMIView: UIView {
     }
     
     @objc func calculateButton() {
-        
         if let heightText  = textFieldView.heightTextField.text,
            let weightText = textFieldView.weightTextField.text {
             delegate?.openBMIResultScreen(weightText: weightText, heightText: heightText)
@@ -75,11 +74,14 @@ extension BMIView: ViewConfiguration {
     
     func setupConstraints() {
         backgroundImage.snp.makeConstraints { make in
+            
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
             
         }
+        
         titleBMICalculator.snp.makeConstraints { make in
+            
             make.width.equalTo(353)
             make.height.equalTo(53)
             make.leading.equalTo(38).offset(20)
@@ -88,18 +90,19 @@ extension BMIView: ViewConfiguration {
         }
         
         textFieldContainer.snp.makeConstraints { make in
+            
             make.top.equalTo(80)
             make.bottom.equalTo(80)
             make.leading.trailing.equalTo(54).inset(20)
         }
         
         calculateIMCButton.snp.makeConstraints { make in
+            
             make.width.equalTo(322)
             make.height.equalTo(45)
             make.trailing.equalTo(54).inset(20)
             make.leading.equalTo(54).inset(20)
             make.top.equalTo(863)
-            
         }
     }
     
@@ -107,5 +110,4 @@ extension BMIView: ViewConfiguration {
         //
     }
 }
-
 

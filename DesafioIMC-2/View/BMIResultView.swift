@@ -3,6 +3,28 @@ import SnapKit
 
 class BMIResultView: UIView {
     
+    lazy var valueLabel: UILabel = {
+        let title = UILabel(frame: .zero)
+        title.font = UIFont(name: "Futura", size: 48)
+        title.textColor = .black
+        title.textAlignment = .center
+        return title
+    }()
+    
+    lazy var resultImage:UIImageView = {
+        let image = UIImageView()
+        image.contentMode = .scaleToFill
+        return image
+    }()
+    
+    lazy var classificationLabel: UILabel = {
+        let title = UILabel(frame: .zero)
+        title.font = UIFont(name: "Futura", size: 30)
+        title.textColor = .black
+        title.textAlignment = .center
+        return title
+    }()
+    
     init(setup: BMIResultSetup, bmiResult: Double) {
         
         super.init(frame: .zero)
@@ -15,33 +37,6 @@ class BMIResultView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    lazy var valueLabel: UILabel = {
-        let title = UILabel(frame: .zero)
-        title.text = ""
-        title.font = UIFont(name: "Futura", size: 48)
-        title.textColor = .black
-        title.textAlignment = .center
-        return title
-    }()
-    
-    
-    lazy var resultImage:UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "")
-        image.contentMode = .scaleToFill
-        return image
-    }()
-    
-    lazy var classificationLabel: UILabel = {
-        let title = UILabel(frame: .zero)
-        title.text = ""
-        title.font = UIFont(name: "Futura", size: 30)
-        title.textColor = .black
-        title.textAlignment = .center
-        return title
-        
-    }()
     
 }
 
@@ -78,3 +73,4 @@ extension BMIResultView: ViewConfiguration {
         backgroundColor = .white
     }
 }
+
