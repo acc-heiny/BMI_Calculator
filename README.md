@@ -7,7 +7,7 @@ This project is a BMI calculator, designed to help you calculate your current we
 First Challenge
 
 - Storyboard version
-- ViewCode version 
+- Viewcode version 
 - MVC architecture
 
   
